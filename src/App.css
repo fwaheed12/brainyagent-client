@@ -66,8 +66,17 @@ li {
     --md-outlined-text-field-label-text-color: #49454F;
     --md-outlined-text-field-input-text-color: #49454F;
     --md-outlined-text-field-outline-color: #79747E;
-}
 
+    --md-list-container-color: #1D1B2014;
+
+    --md-outlined-text-field-font-family: system-ui;
+
+
+    --md-outlined-text-field-input-text-font: system-ui;
+
+    --md-outlined-text-field-input-text-font: "Roboto Flex", sans-serif;
+    --md-outlined-text-field-label-text-font: "Roboto Flex", sans-serif;
+}
 
 md-filled-button,
 md-filled-tonal-button,
@@ -85,6 +94,7 @@ md-outlined-button:hover {
     --md-outlined-button-label-text-color: #A2C9FE;
     --md-sys-color-primary: #A2C9FE;
     --md-outlined-button-outline-color: #8D9199;
+
 }
 
 md-outlined-text-field:focus {
@@ -95,6 +105,11 @@ md-filled-button.formButton {
     --md-sys-color-primary: #38608F;
     --md-sys-color-on-primary: #fff;
 }
+
+md-list {
+    border-radius: 8px;
+}
+
 
 /*===== login page =======*/
 .header {
@@ -172,7 +187,7 @@ section {
 }
 
 .keyFeature {
-    background-image: url(../src/assets/keyFeatureBg.png);
+    background: url(../src/assets/keyFeatureBg.png) lightgray -641px -249.062px / 187.365% 249.28% no-repeat;
     background-color: #ECECEC;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,15 +195,15 @@ section {
     background-position: center;
 }
 
-.card {
-    background-color: #1D1B2014;
+.listCard {
+    /* background-color: #1D1B2014; */
     border: none;
     border-radius: 8px;
     font-family: "Roboto Flex", sans-serif;
     color: #43474E;
 }
 
-.card p {
+.listCard p {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

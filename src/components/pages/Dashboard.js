@@ -62,28 +62,51 @@ const Dashboard = () => {
                         <div className='col-xl-7 col-lg-10 col-md-12 col-sm-12 col-12'>
                             <div className='row g-4'>
                                 <div className='col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column gap-4'>
-                                    <div className='card p-3'>
-                                        <h3 className='card-title h6 m-0'>💡 Intelligent Conversational AI</h3>
-                                        <p className='m-0'>Understands user intent and delivers precise responses.</p>
-                                    </div>
-                                    <div className='card p-3'>
-                                        <h3 className='card-title h6 m-0'>🔗 Flexible API Integration</h3>
-                                        <p className='m-0'>Integrates smoothly with existing systems, databases, and APIs.</p>
-                                    </div>
-                                    <div className='card p-3'>
-                                        <h3 className='card-title h6 m-0'>🌎 Global Language Support</h3>
-                                        <p className='m-0'>Understands user intent and delivers precise responses.</p>
-                                    </div>
+                                    <md-list>
+                                        <md-list-item>
+                                            <div className='listCard'>
+                                                <h3 className='card-title h6 m-0'>💡 Intelligent Conversational AI</h3>
+                                                <p className='m-0'>Understands user intent and delivers precise responses.</p>
+                                            </div>
+                                        </md-list-item>
+                                    </md-list>
+
+                                    <md-list>
+                                        <md-list-item>
+                                            <div className='listCard'>
+                                                <h3 className='card-title h6 m-0'>🔗 Flexible API Integration</h3>
+                                                <p className='m-0'>Integrates smoothly with existing systems, databases, and APIs.</p>
+                                            </div>
+                                        </md-list-item>
+                                    </md-list>
+
+                                    <md-list>
+                                        <md-list-item>
+                                            <div className='listCard'>
+                                                <h3 className='card-title h6 m-0'>🌎 Global Language Support</h3>
+                                                <p className='m-0'>Understands user intent and delivers precise responses.</p>
+                                            </div>
+                                        </md-list-item>
+                                    </md-list>
                                 </div>
                                 <div className='col-lg-6 col-md-6 col-sm-12 col-12 d-flex flex-column gap-4'>
-                                    <div className='card p-3'>
-                                        <h3 className='card-title h6 m-0'>📊 Data-Driven Insights</h3>
-                                        <p className='m-0'>Understands user intent and delivers precise responses.</p>
-                                    </div>
-                                    <div className='card p-3'>
-                                        <h3 className='card-title h6 m-0'>🔒 Secure & Reliable</h3>
-                                        <p className='m-0'>Industry-grade security protocols to ensure data protection and compliance.</p>
-                                    </div>
+
+                                    <md-list>
+                                        <md-list-item>
+                                            <div className='listCard'>
+                                                <h3 className='card-title h6 m-0'>📊 Data-Driven Insights</h3>
+                                                <p className='m-0'>Understands user intent and delivers precise responses.</p>
+                                            </div>
+                                        </md-list-item>
+                                    </md-list>
+                                    <md-list>
+                                        <md-list-item>
+                                            <div className='listCard'>
+                                                <h3 className='card-title h6 m-0'>🔒 Secure & Reliable</h3>
+                                                <p className='m-0'>Industry-grade security protocols to ensure data protection and compliance.</p>
+                                            </div>
+                                        </md-list-item>
+                                    </md-list>
                                 </div>
                             </div>
                         </div>
@@ -103,11 +126,11 @@ const Dashboard = () => {
                         <div className='col-lg-4 col-md-5 col-sm-12 col-12'>
                             <form>
                                 <div className='w-100 d-flex flex-column gap-3 mb-3'>
-                                    <md-outlined-text-field label="Full Name" value="">
+                                    <md-outlined-text-field class="input" label="Full Name" value="">
                                     </md-outlined-text-field>
-                                    <md-outlined-text-field label="Email Address" value="">
+                                    <md-outlined-text-field class="input" label="Email Address" value="">
                                     </md-outlined-text-field>
-                                    <md-outlined-text-field rows="3" type="textarea" label="How Can We Help You?" value="">
+                                    <md-outlined-text-field class="input" rows="3" type="textarea" label="How Can We Help You?" value="">
                                     </md-outlined-text-field>
                                 </div>
                                 <md-filled-button class="formButton">Let’s Talk</md-filled-button>
