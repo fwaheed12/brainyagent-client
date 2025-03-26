@@ -1,6 +1,38 @@
 import React, { useState } from 'react';
 import fullLogo from '../../assets/fullLogo.png'
+import {sendEmail} from '../../services/httpService';
 const Dashboard = () => {
+
+    const [formData, setFormData] = useState({
+        fullname: '',
+        email: '',
+        message: ''
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        console.log(formData);
+        e.preventDefault();
+        try {
+            const response = await sendEmail(formData);
+           debugger;
+            console.log(response);
+
+            if (response.ok) {
+                alert('Form submitted successfully!');
+            } else {
+                alert('Failed to submit the form. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('An error occurred. Please try again later.');
+        }
+    };
+
     return (
         <>
             {/* <label>
@@ -124,14 +156,31 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <div className='col-lg-4 col-md-5 col-sm-12 col-12'>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className='w-100 d-flex flex-column gap-3 mb-3'>
-                                    <md-outlined-text-field class="input" label="Full Name" value="">
-                                    </md-outlined-text-field>
-                                    <md-outlined-text-field class="input" label="Email Address" value="">
-                                    </md-outlined-text-field>
-                                    <md-outlined-text-field class="input" rows="3" type="textarea" label="How Can We Help You?" value="">
-                                    </md-outlined-text-field>
+                                <md-outlined-text-field
+                                        class="input"
+                                        label="Full Name"
+                                        name="fullname"
+                                        value={formData.fullname}
+                                        onInput={handleInputChange}
+                                    ></md-outlined-text-field>
+                                    <md-outlined-text-field
+                                        class="input"
+                                        label="Email Address"
+                                        name="email"
+                                        value={formData.email}
+                                        onInput={handleInputChange}
+                                    ></md-outlined-text-field>
+                                    <md-outlined-text-field
+                                        class="input"
+                                        rows="3"
+                                        type="textarea"
+                                        label="How Can We Help You?"
+                                        name="message"
+                                        value={formData.message}
+                                        onInput={handleInputChange}
+                                    ></md-outlined-text-field>
                                 </div>
                                 <md-filled-button class="formButton">Let’s Talk</md-filled-button>
                             </form>
